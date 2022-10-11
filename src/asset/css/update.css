@@ -1,0 +1,43 @@
+#update {
+}
+
+#update .header-text {
+    margin-top: 16px;
+    text-align: center;
+}
+
+#update .information_box {
+    display: inline-block;
+    margin-left: 64px;
+    border: 1px solid #ccc;
+    padding: 12px 8px;
+}
+
+#update #location {
+    margin-left: 10px;
+}
+
+#update #table {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+#update table,
+th,
+td {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+
+#update #table .title {
+    text-align: center;
+}
+
+#update .sellprice,
+#update .buyprice {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 4px 8px;
+}

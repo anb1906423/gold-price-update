@@ -1,22 +1,23 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-
-const Header = () => {
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+const Header = ({ isAdmin }) => {
     return (
-        <div className='header'>
-            <div className='wp-logo'>
-                <h1>LOGO</h1>
+        <div className="header">
+            <div className="wp-logo">
+                <img src={require('../asset/images/Logo1.jpg')} className="logo" />
             </div>
-            <ul className='menu'>
-                <Link to='/'>
-                    <li className='menu-item'>Menu Item</li>
-                </Link>
-                <Link to='/'>
-                    <li className='menu-item'>Menu Item</li>
-                </Link>
+            <ul className="menu">
+                <NavLink to="/home">
+                    <li className="menu-item">Trang chủ</li>
+                </NavLink>
+                {isAdmin && (
+                    <NavLink to="/updateprice">
+                        <li className="menu-item">Cập nhật giá</li>
+                    </NavLink>
+                )}
             </ul>
         </div>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;
