@@ -35,5 +35,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/anb1906423/gold-price-update.git",
+  "license": "MIT"
 }
