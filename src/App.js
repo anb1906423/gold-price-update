@@ -2,22 +2,30 @@ import Home from './page/Home';
 import Layout from './components/Layout';
 import { Routes, Route } from 'react-router-dom';
 import Update from './page/Update';
-import { useState } from 'react';
+import { useState, createContext } from 'react';
+
+export const LoginContext = createContext();
+
 function App() {
-    const [isAdmin, setIsAdmin] = useState(true);
+    const [login, setLogin] = useState(false);
+
+    const [loginMount, setLoginMount] = useState(false);
+
     return (
-        <Routes>
-            <Route path="/" element={<Layout isAdmin={isAdmin} />}>
-                <Route>
-                    <Route path="/home" element={<Home />} />
-                </Route>
-                {isAdmin && (
+        <LoginContext.Provider value={{ login, loginMount, setLogin, setLoginMount }}>
+            <Routes>
+                <Route path="/" element={<Layout />}>
                     <Route>
-                        <Route path="/updateprice" element={<Update isAdmin={isAdmin} />} />
+                        <Route path="/home" element={<Home />} />
                     </Route>
-                )}
-            </Route>
-        </Routes>
+                    {login && (
+                        <Route>
+                            <Route path="/updateprice" element={<Update />} />
+                        </Route>
+                    )}
+                </Route>
+            </Routes>
+        </LoginContext.Provider>
     );
 }
 

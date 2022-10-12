@@ -15,8 +15,9 @@ function Update() {
                     </select>
                 </h4>
                 <h4 className="icontent">
-                    Ngày: <input type="date"></input>
+                    Ngày cập nhật: <input type="date"></input>
                 </h4>
+                <button>Tìm</button>
             </div>
             <table id="table">
                 <tr>
@@ -34,14 +35,15 @@ function Update() {
                     <td>1</td>
                     <td>SJC</td>
                     <td>
-                        <input class="sellprice" placeholder="Giá mua"></input>
+                        <input class="sellprice" placeholder="Giá mua" value="123"></input>
                     </td>
                     <td>
-                        <input class="buyprice" placeholder="Giá bán"></input>
+                        <input class="buyprice" placeholder="Giá bán" value="123"></input>
                     </td>
                 </tr>
+
+                <button>Lưu</button>
             </table>
-            <div className="updateform"></div>
         </div>
     );
 }

@@ -1,4 +1,5 @@
 #update {
+    min-height: 1900px;
 }
 
 #update .header-text {
@@ -11,6 +12,7 @@
     margin-left: 64px;
     border: 1px solid #ccc;
     padding: 12px 8px;
+    margin-bottom: 12px;
 }
 
 #update #location {
@@ -32,6 +34,10 @@ td {
 
 #update #table .title {
     text-align: center;
+}
+
+#update #table tr {
+    height: 32px;
 }
 
 #update .sellprice,

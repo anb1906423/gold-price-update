@@ -1,13 +1,19 @@
 import { Outlet } from 'react-router-dom';
-import Header from './Header';
+import { LoginContext } from '../App';
+import { useContext } from 'react';
 
-const Layout = ({ isAdmin }) => {
+import Header from './Header';
+import Login from './Login';
+const Layout = () => {
+    const { loginMount, setLoginMount } = useContext(LoginContext);
+
     return (
         <div className="main">
             <div className="wp-header">
-                <Header isAdmin={isAdmin} />
+                <Header />
             </div>
             <div className="container">
+                {loginMount && <Login />}
                 <Outlet />
             </div>
         </div>

@@ -2,6 +2,7 @@
     height: 60px;
     position: relative;
     box-shadow: 2px 0px 2px 2px #ccc;
+    display: flex;
 }
 
 .header .wp-logo {
@@ -14,6 +15,7 @@
 .header .menu {
     text-align: center;
     list-style-type: none;
+    flex: 1;
 }
 
 .header .logo {
@@ -33,5 +35,25 @@
 }
 
 .header .menu a.active {
+    opacity: 1;
+}
+
+.header .login {
+    display: flex;
+    margin-right: 24px;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .login button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    opacity: 0.7;
+    transition: all 0.1s ease;
+}
+.header .login button:hover {
     opacity: 1;
 }
